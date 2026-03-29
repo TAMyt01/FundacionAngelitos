@@ -1,0 +1,84 @@
+// Variables
+@purple-main: #6a1b9a;
+@text-gray: #4a4a4a;
+@bg-light: #fdfdfd;
+@border-color: #eee;
+@shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+
+.politicas-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+
+  .politicas-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      color: @purple-main;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .linea-decorativa {
+      width: 80px;
+      height: 4px;
+      background: @purple-main;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+  }
+
+  .politicas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .politica-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: @shadow-soft;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid @border-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(106, 27, 154, 0.15);
+    }
+
+    .numero {
+      background: @purple-main;
+      color: white;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .contenido {
+      h3 {
+        color: @purple-main;
+        margin: 0 0 12px 0;
+        font-size: 1.25rem;
+      }
+
+      p {
+        color: @text-gray;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
