@@ -1,1 +1,49 @@
 <h1>DDD</h1>
+{{!-- Sección de Noticias y Actividades Recientes --}}
+<section class="noticias-section">
+    <div class="container">
+        <h2 class="section-title">Noticias y Actividades</h2>
+        
+        <div class="news-container">
+            {{#each actividades}}
+            <article class="news-item">
+                <div class="news-date">{{this.fecha}}</div>
+                <div class="news-body">
+                    <h3 class="news-headline">{{this.titulo}}</h3>
+                    <p>{{this.resumen}}</p>
+                    <span class="news-tag">{{this.categoria}}</span>
+                </div>
+            </article>
+            {{else}}
+            {{!-- Contenido estático basado en el Informe 2025 --}}
+            
+            {{!-- Noticia 1: Congreso Nacional --}}
+            <article class="news-item shadow-sm">
+                <div class="news-content">
+                    <h3>VIII Congreso Nacional de Neonatología</h3>
+                    <p>Realizado con éxito del 27 de febrero al 01 de marzo, albergando a más de 180 profesionales de la salud[cite: 258].</p>
+                    <small>Categoría: Capacitación Médica</small>
+                </div>
+            </article>
+
+            {{!-- Noticia 2: Bingo Benéfico --}}
+            <article class="news-item shadow-sm">
+                <div class="news-content">
+                    <h3>Bingo por Nuestros Angelitos</h3>
+                    <p>Regreso triunfal en 2025 en Cascadas Mall, con la participación de más de 500 personas para recaudar fondos[cite: 259, 260].</p>
+                    <small>Categoría: Recaudación</small>
+                </div>
+            </article>
+
+            {{!-- Noticia 3: Superhéroes y Princesas --}}
+            <article class="news-item shadow-sm">
+                <div class="news-content">
+                    <h3>Visita de Superhéroes y Princesas</h3>
+                    <p>El voluntariado llevó alegría y esperanza a las salas de pediatría del Materno Infantil el 25 de octubre[cite: 261, 262].</p>
+                    <small>Categoría: Voluntariado</small>
+                </div>
+            </article>
+            {{/each}}
+        </div>
+    </div>
+</section>
