@@ -1,6 +1,7 @@
 export default{
     "events":[
         {
+            "image": "congreso-neonatologia.jpg",
             "alt": "Congreso Nacional de Neonatología",
             "date": "27 de febrero al 01 de marzo del 2025",
             "title": "VIII Congreso Nacional de Neonatología",
@@ -8,6 +9,7 @@ export default{
         },
 
         {
+            "image": "bingo.jpg",
             "alt": "Bingo por Nuestros Angelitos",
             "date": "02 de julio del 2025",
             "title": "Bingo por Nuestros Angelitos",
@@ -15,6 +17,7 @@ export default{
         },
 
         {
+            "image": "concurso.jpg",
             "alt": "Ganador del Concurso de Diseño",
             "date": "17 de noviembre del 2025",
             "title": "Concurso de Diseño Día del Prematuro",
@@ -22,6 +25,7 @@ export default{
         },
 
         {
+            "image": "visita-anual.jpg",
             "alt": "Visita Anual de Superhéroes y Princesas",
             "date": "25 de octubre del 2025",
             "title": "Visita Anual de Superhéroes y Princesas",
@@ -29,6 +33,7 @@ export default{
         },
 
         {
+            "image": "noche-benefica.jpg",
             "alt": "Noche Benéfica por Nuestros Angelitos",
             "date": "15 de noviembre del 2025",
             "title": "Noche Benéfica por Nuestros Angelitos",
@@ -36,6 +41,7 @@ export default{
         },
 
         {
+            "image": "induccion.jpg",
             "alt": "Inducción para Voluntarios",
             "date": "21 de septiembre del 2025",
             "title": "Inducción para Voluntarios    ",
