@@ -1,1 +1,15 @@
-<h1>EEE</h1>
+<section class="testimonials">
+  <h2>Opiniones</h2>
+  <p class="subtitle">Nos importa la experiencia de nuestros pacientes</p>
+  
+  <div class="cards">
+    {{#each testimonials}}
+      <div class="card">
+        <div class="card-body">
+          <p class="text">{{text}}</p>
+          <p class="stars">{{stars}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
