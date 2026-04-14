@@ -7,6 +7,8 @@ import PurgeCSSPlugin from "vite-plugin-purgecss";
 
 import getData from "./data";
 
+const base = process.env.DEPLOY_BASE_URL || "/";
+
 // Detecta automáticamente todos los .html como entradas MPA
 const htmlEntries = Object.fromEntries(
   glob.sync("**/*.html", {
@@ -18,7 +20,7 @@ const htmlEntries = Object.fromEntries(
 );
 
 export default defineConfig({
-  base: process.env.DEPLOY_BASE_URL || "/",
+  base,
   build: {
     rollupOptions: {
       input: htmlEntries,
@@ -27,7 +29,10 @@ export default defineConfig({
   plugins: [
     HandlebarsPlugin({
       partialDirectory: resolve(__dirname, "partials"),
-      context: (page) => getData(page),
+      context: (page) => ({
+        base,
+        ...getData(page),
+      }),
     }),
     PurgeCSSPlugin({
       content: ["**/*.html", "**/*.js", "**/*.hbs"],
