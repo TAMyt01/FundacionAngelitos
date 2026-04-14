@@ -1,0 +1,97 @@
+// Variables de color
+@purple-dark: #2c0b2e;      // Púrpura muy oscuro
+@purple-medium: #4a1d4d;    // Púrpura medio
+@purple-light: #6b2e6f;     // Púrpura más claro para hover
+@text-light: #f5e6f7;       // Texto claro
+@white: #ffffff;
+
+// Estilos globales del header
+.main-header {
+    background: @purple-dark;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid @purple-light;
+}
+
+// Contenedor del logo y título
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.logo-container h1 {
+    color: @text-light;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+// Navegación
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    row-gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.main-nav a {
+    color: @text-light;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+
+    &:hover {
+        color: @white;
+        background-color: @purple-medium;
+        transform: translateY(-2px);
+    }
+}
+
+// Separadores entre enlaces
+.main-nav span {
+    color: @purple-light;
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+    }
+
+    .logo-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .main-nav a {
+        font-size: 0.85rem;
+    }
+}

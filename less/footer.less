@@ -1,0 +1,155 @@
+// Footer styles (agregar al final del archivo LESS existente)
+.main-footer {
+    background: @purple-dark;
+    margin-top: 3rem;
+    padding: 2rem 2rem 0;
+    border-top: 2px solid @purple-light;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-section {
+    h4 {
+        color: @text-light;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid @purple-light;
+        display: inline-block;
+    }
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+
+    .footer-logo {
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    h3 {
+        color: @text-light;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+}
+
+.footer-description {
+    color: @text-light;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.contact-list, .schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        color: @text-light;
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+    min-width: 25px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    .social-link {
+        color: @text-light;
+        text-decoration: none;
+        padding: 0.4rem 0.8rem;
+        background: @purple-medium;
+        border-radius: 6px;
+        text-align: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: @purple-light;
+            transform: translateX(5px);
+        }
+    }
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+
+    p {
+        color: @text-light;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            color: @text-light;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Responsive para footer
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 1.5rem 1rem 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+
+        .footer-links {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    }
+
+    .contact-list li {
+        font-size: 0.85rem;
+    }
+}
