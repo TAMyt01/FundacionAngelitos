@@ -1,39 +1,60 @@
-<h1>AAA</h1>
-{{!-- Sección de Colaboradores y Aliados --}}
-<section class="colaboradores-section">
-    <div class="container">
-        <h2 class="section-title">Nuestros Aliados Solidarios</h2>
-        <p class="section-description">
-            Gracias a la solidaridad de empresas y ciudadanos comprometidos, logramos canalizar recursos para mejorar la atención neonatal[cite: 241, 255].
-        </p>
-        
-        <div class="row allies-grid">
-            {{!-- Aliado: Hospital Escuela --}}
-            <div class="col-md-4 ally-card">
-                <div class="card-content">
-                    <img src="/img/aliados/hospital-escuela.png" alt="Hospital Escuela">
-                    <h3>Hospital Escuela</h3>
-                    <p>Principal aliado asistencial y centro de referencia hospitalaria en Honduras[cite: 240, 252].</p>
-                </div>
-            </div>
+@primary: #2c7be5;
+@secondary: #6c757d;
+@light: #f8f9fa;
+@shadow: 0 4px 12px rgba(0,0,0,0.08);
 
-            {{!-- Aliado: DHL Honduras --}}
-            <div class="col-md-4 ally-card">
-                <div class="card-content">
-                    <img src="/img/aliados/dhl.png" alt="DHL Honduras">
-                    <h3>DHL Honduras</h3>
-                    <p>Reconocimiento a través del premio "DHL Got Heart" por el proyecto de acompañamiento en duelo[cite: 270].</p>
-                </div>
-            </div>
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-            {{!-- Aliado: Banco Ficohsa --}}
-            <div class="col-md-4 ally-card">
-                <div class="card-content">
-                    <img src="/img/aliados/ficohsa.png" alt="Banco Ficohsa">
-                    <h3>Banco Ficohsa</h3>
-                    <p>Apoyo mediante el premio "Mujeres Adelante 2025" en la categoría de Liderazgo Empresarial Femenino[cite: 271].</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+.section-description {
+    text-align: center;
+    color: @secondary;
+    margin-bottom: 40px;
+}
+   COLABORADORES
+
+.colaboradores-section {
+    padding: 60px 0;
+    background: @light;
+
+    .allies-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ally-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: @shadow;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+
+            img {
+                max-width: 80px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 14px;
+                color: @secondary;
+            }
+        }
+    }
+}
