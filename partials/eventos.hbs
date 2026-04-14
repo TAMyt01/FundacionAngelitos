@@ -1,1 +1,30 @@
-<h1>BBB</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cards</title>
+</head>
+
+<body>
+    <div class="grid">
+        {{#each events}}
+        <div class="card">
+            <div class="card_image-wrap">
+                <img src="../assets/eventos-assets/{{image}}" alt="{{alt}}">
+            </div>
+            <div class="card_body">
+                <div class="card_date">{{date}}</div>
+                <div class="card_title">{{title}}</div>
+                <div class="card_description">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</body>
+
+</html>
