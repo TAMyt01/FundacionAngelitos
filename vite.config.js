@@ -5,7 +5,7 @@ import { glob } from "glob";
 import HandlebarsPlugin from "vite-plugin-handlebars";
 import PurgeCSSPlugin from "vite-plugin-purgecss";
 
-import getData from "./data";
+import getData from "./data/index"
 
 const base = process.env.DEPLOY_BASE_URL || "/";
 
