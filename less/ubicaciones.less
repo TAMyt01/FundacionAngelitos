@@ -1,0 +1,72 @@
+@ubic-purple-light: #EEEDFE;
+@ubic-purple-mid: #CECBF6;
+@ubic-purple-dark: #534AB7;
+
+.ubic-seccion {
+  background: @ubic-purple-light;
+  padding: 2.5rem;
+
+  .ubic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .ubic-card {
+    background: #fff;
+    border: 0.5px solid @ubic-purple-mid;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ubic-pin {
+    width: 40px;
+    height: 40px;
+    background: @ubic-purple-light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .ubic-numero {
+    font-size: 13px;
+    font-weight: 600;
+    color: @ubic-purple-dark;
+    background: @ubic-purple-mid;
+    border-radius: 4px;
+    padding: 3px 10px;
+    align-self: flex-start;
+  }
+
+  .ubic-direccion {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ubic-ciudad {
+    font-size: 14px;
+    font-weight: 600;
+    color: @ubic-purple-dark;
+    margin: 0;
+  }
+
+  .ubic-descripcion {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    border-top: 0.5px solid @ubic-purple-mid;
+    padding-top: 0.75rem;
+  }
+}
